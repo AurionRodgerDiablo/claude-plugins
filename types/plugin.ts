@@ -12,6 +12,10 @@ export interface Plugin {
   // Install command may be provided; otherwise computed from the name
   installCommand?: string;
   tags: string[];
+  // Additional optional metadata
+  stars?: number;
+  downloads?: number;
+  author?: string;
 }
 
 export type FilterType = 'today' | 'featured' | 'latest' | 'plugins' | 'marketplaces' | 'official';

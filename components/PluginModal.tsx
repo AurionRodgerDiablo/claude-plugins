@@ -28,8 +28,10 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
 
   if (!isOpen) return null;
 
+  const installCommand = plugin.installCommand ?? `/plugin install ${plugin.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(plugin.installCommand);
+    await navigator.clipboard.writeText(installCommand);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -121,7 +123,7 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
             <h3 className="text-primary-500 font-semibold mb-3">Installation Command</h3>
             <div className="relative">
               <pre className="bg-black text-gray-100 px-6 py-4 rounded-lg overflow-x-auto border border-gray-800">
-                <code className="text-sm font-mono">{plugin.installCommand ?? `/plugin install ${plugin.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}</code>
+                <code className="text-sm font-mono">{installCommand}</code>
               </pre>
               <button
                 onClick={handleCopy}
