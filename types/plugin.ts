@@ -4,14 +4,16 @@ export interface Plugin {
   description: string;
   icon?: string; // Optional - will use default if not provided
   category: 'code-tools' | 'database' | 'utilities' | 'ai-ml' | 'templates';
-  featured: boolean;
-  sponsored: boolean;
-  official: boolean;
+  // Optional/marketing fields
+  featured?: boolean;
+  sponsored?: boolean;
+  official?: boolean;
   verified?: boolean;
-  installCommand: string;
-  stars: number;
+  stars?: number;
   downloads?: number;
-  author: string;
+  author?: string;
+  // Install command may be provided; otherwise computed from the name
+  installCommand?: string;
   tags: string[];
 }
 

@@ -89,10 +89,12 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
                   Verified
                 </span>
               )}
-              <span className="text-gray-400 flex items-center gap-1">
-                <FiStar className="text-yellow-500" />
-                {plugin.stars}
-              </span>
+              {typeof plugin.stars === 'number' && (
+                <span className="text-gray-400 flex items-center gap-1">
+                  <FiStar className="text-yellow-500" />
+                  {plugin.stars}
+                </span>
+              )}
               {plugin.downloads && (
                 <span className="text-gray-400 flex items-center gap-1">
                   <FiDownload />
@@ -119,7 +121,7 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
             <h3 className="text-primary-500 font-semibold mb-3">Installation Command</h3>
             <div className="relative">
               <pre className="bg-black text-gray-100 px-6 py-4 rounded-lg overflow-x-auto border border-gray-800">
-                <code className="text-sm font-mono">{plugin.installCommand}</code>
+                <code className="text-sm font-mono">{plugin.installCommand ?? `/plugin install ${plugin.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}</code>
               </pre>
               <button
                 onClick={handleCopy}
@@ -132,9 +134,11 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
                 )}
               </button>
             </div>
-            <p className="text-xs text-gray-500 mt-2">
-              By {plugin.author}
-            </p>
+            {plugin.author && (
+              <p className="text-xs text-gray-500 mt-2">
+                By {plugin.author}
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export function Header() {
             Submit
           </button>
           <a
-            href="https://github.com"
+            href="https://github.com/suio03/claude-plugins"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2"

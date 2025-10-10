@@ -49,9 +49,11 @@ export function PluginCard({ plugin, onClick }: PluginCardProps) {
                 Official
               </span>
             )}
-            <span className="text-xs text-gray-500 dark:text-gray-500">
-              {plugin.stars} ⭐
-            </span>
+            {typeof plugin.stars === 'number' && (
+              <span className="text-xs text-gray-500 dark:text-gray-500">
+                {plugin.stars} ⭐
+              </span>
+            )}
           </div>
           <TrustBadge downloads={plugin.downloads} verified={plugin.verified} />
         </div>
