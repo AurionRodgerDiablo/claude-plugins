@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
-import { FiBrain, FiZap, FiPackage, FiUsers, FiTool, FiGlobe } from 'react-icons/fi';
+import { FiCpu, FiZap, FiPackage, FiUsers, FiTool, FiGlobe } from 'react-icons/fi';
 
 const features = [
   {
-    icon: <FiBrain className="text-3xl" />,
+    icon: <FiCpu className="text-3xl" />,
     title: 'AI-Powered Development',
     description:
       'Integrate Claude\'s reasoning directly into your dev workflow — from code review to documentation generation.',

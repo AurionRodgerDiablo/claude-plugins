@@ -7,8 +7,10 @@ export interface Plugin {
   featured: boolean;
   sponsored: boolean;
   official: boolean;
+  verified?: boolean;
   installCommand: string;
   stars: number;
+  downloads?: number;
   author: string;
   tags: string[];
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import { FiStar } from 'react-icons/fi';
 import { Plugin } from '@/types/plugin';
+import { TrustBadge } from '@/components/TrustBadge';
 
 interface PluginCardProps {
   plugin: Plugin;
@@ -25,7 +26,7 @@ export function PluginCard({ plugin }: PluginCardProps) {
           <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-3">
             {plugin.description}
           </p>
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap mb-2">
             {plugin.sponsored && (
               <span className="px-2 py-1 text-xs font-medium bg-primary-500 text-white rounded">
                 Sponsor
@@ -40,6 +41,7 @@ export function PluginCard({ plugin }: PluginCardProps) {
               {plugin.stars} ⭐
             </span>
           </div>
+          <TrustBadge downloads={plugin.downloads} verified={plugin.verified} />
         </div>
       </div>
     </div>

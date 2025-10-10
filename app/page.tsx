@@ -6,7 +6,7 @@ import { Header } from '@/components/Header';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
 import { GettingStarted } from '@/components/GettingStarted';
-import { Stats } from '@/components/Stats';
+import { Prerequisites } from '@/components/Prerequisites';
 import { plugins } from '@/lib/data';
 
 export default function Home() {
@@ -21,13 +21,10 @@ export default function Home() {
       <main>
         <Hero />
 
-        <Stats />
+        <Prerequisites />
 
-        <Features />
-
-        <HowItWorks />
-
-        <div className="max-w-7xl mx-auto mb-8 pt-20">
+        {/* Main Plugin Directory Section */}
+        <div className="max-w-7xl mx-auto mb-8 pt-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Browse Claude Code Plugins
           </h2>
@@ -39,6 +36,11 @@ export default function Home() {
           <PluginGrid title="Code Tools" plugins={codeToolsPlugins} />
           <PluginGrid title="AI & ML Tools" plugins={aiMlPlugins} />
         </div>
+
+        {/* Educational/Marketing Sections Below */}
+        <Features />
+
+        <HowItWorks />
 
         <GettingStarted />
 

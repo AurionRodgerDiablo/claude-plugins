@@ -14,25 +14,37 @@ const faqs = [
     id: 2,
     question: 'How do I install a plugin?',
     answer:
-      'Installing a plugin is simple! Just copy the install command shown on the plugin card and run it in your terminal. Most plugins use npm/npx for easy installation.',
+      'Installing a plugin is simple! Just copy the install command shown on the plugin card and run it in your terminal with Claude Code CLI. Most plugins use npm/npx for easy installation.',
   },
   {
     id: 3,
-    question: 'How can I submit my plugin?',
+    question: 'How do I uninstall a plugin?',
     answer:
-      'You can submit your plugin by creating a new issue on our GitHub repository. Provide details about your plugin including its name, description, features, and installation command.',
+      'To remove a plugin, use the command: /plugin uninstall <plugin-name>. You can also list all installed plugins with /plugin list to see what\'s currently active.',
   },
   {
     id: 4,
+    question: 'What if a plugin doesn\'t work?',
+    answer:
+      'First, check that you have the latest version of Claude Code CLI. Make sure all prerequisites are met (Node.js, Git, etc.). If issues persist, check the plugin\'s GitHub repository for known issues or contact the plugin author.',
+  },
+  {
+    id: 5,
+    question: 'Are these plugins safe to use?',
+    answer:
+      'Plugins marked with "Verified" badge have been reviewed by our team. "Official" plugins are from Anthropic. Always review the plugin\'s source code and check download counts before installing. We recommend starting with verified or official plugins.',
+  },
+  {
+    id: 6,
     question: 'What are Claude Code marketplaces?',
     answer:
       'Claude Code marketplaces are collections of tools, templates, and integrations that extend Claude Code functionality. They can include MCP servers, custom commands, and development utilities.',
   },
   {
-    id: 5,
-    question: 'Is this official?',
+    id: 7,
+    question: 'How can I submit my plugin?',
     answer:
-      'This is a community-driven directory. While some plugins are marked as "Official" and maintained by Anthropic, most plugins are created by the community.',
+      'You can submit your plugin by creating a new issue on our GitHub repository. Provide details about your plugin including its name, description, features, and installation command. Include a link to your source code.',
   },
 ];
 

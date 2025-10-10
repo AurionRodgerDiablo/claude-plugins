@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { CodeBlock } from './CodeBlock';
 import { FiCheckCircle } from 'react-icons/fi';
