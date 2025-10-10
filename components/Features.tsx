@@ -50,7 +50,7 @@ export function Features() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Why Use Claude Code Plugins
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Claude Code Plugins unlock the full potential of Anthropic's AI coding assistant by letting you
             extend, automate, and personalize your workflow. Build faster, review smarter, and stay
             consistent across projects.
@@ -61,11 +61,11 @@ export function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-all hover:shadow-lg"
+              className="p-6 rounded-lg border border-gray-200 hover:border-primary-300 transition-all hover:shadow-lg"
             >
               <div className="text-primary-500 mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>

@@ -18,7 +18,7 @@ export function PluginGrid({ title, plugins, showViewAll = true }: PluginGridPro
     <>
       <div className="mb-12">
         <div className="flex items-center justify-between mb-6 px-4">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{title}</h2>
+          <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           {showViewAll && (
             <button className="text-primary-500 hover:text-primary-600 font-medium flex items-center gap-1 transition-colors">
               View All →

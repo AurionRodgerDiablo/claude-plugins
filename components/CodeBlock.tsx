@@ -18,7 +18,7 @@ export function CodeBlock({ code }: CodeBlockProps) {
 
   return (
     <div className="relative group">
-      <pre className="bg-gray-900 dark:bg-gray-950 text-gray-100 px-6 py-4 rounded-lg overflow-x-auto">
+      <pre className="bg-gray-900 text-gray-100 px-6 py-4 rounded-lg overflow-x-auto">
         <code className="text-sm font-mono">{code}</code>
       </pre>
       <button

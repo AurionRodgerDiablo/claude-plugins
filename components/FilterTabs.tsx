@@ -34,7 +34,7 @@ export function FilterTabs({ onFilterChange }: FilterTabsProps) {
           className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all ${
             activeFilter === filter.id
               ? 'bg-primary-500 text-white shadow-md'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
           {filter.icon}

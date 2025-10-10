@@ -9,9 +9,6 @@ export interface Plugin {
   sponsored?: boolean;
   official?: boolean;
   verified?: boolean;
-  stars?: number;
-  downloads?: number;
-  author?: string;
   // Install command may be provided; otherwise computed from the name
   installCommand?: string;
   tags: string[];

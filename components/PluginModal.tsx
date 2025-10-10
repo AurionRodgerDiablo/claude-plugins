@@ -45,7 +45,7 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
         <div
-          className="relative bg-gray-900 dark:bg-gray-950 rounded-2xl max-w-2xl w-full p-8 pointer-events-auto animate-flipIn shadow-2xl"
+          className="relative bg-gray-900 rounded-2xl max-w-2xl w-full p-8 pointer-events-auto animate-flipIn shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}

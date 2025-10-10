@@ -46,8 +46,8 @@ export default function Home() {
         <FAQ />
       </main>
 
-      <footer className="border-t border-gray-200 dark:border-gray-800 py-8 px-4">
-        <div className="max-w-7xl mx-auto text-center text-gray-600 dark:text-gray-400">
+      <footer className="border-t border-gray-200 py-8 px-4">
+        <div className="max-w-7xl mx-auto text-center text-gray-600">
           <p className="mb-2">
             Claude Plugin Directory - A community-driven marketplace for Claude Code plugins
           </p>

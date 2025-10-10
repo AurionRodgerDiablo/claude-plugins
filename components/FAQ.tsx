@@ -58,18 +58,18 @@ export function FAQ() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <h2 className="text-3xl font-bold text-center mb-12">FAQ</h2>
-      <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
+      <p className="text-center text-gray-600 mb-8">
         Frequently Asked Questions about Claude Code Plugins
       </p>
       <div className="space-y-4">
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden"
+            className="border border-gray-200 rounded-lg overflow-hidden"
           >
             <button
               onClick={() => toggleFAQ(faq.id)}
-              className="w-full px-6 py-4 flex items-center justify-between bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
             >
               <span className="font-medium text-left flex items-center gap-3">
                 <span className="text-gray-400 font-mono">{faq.id}</span>
@@ -82,8 +82,8 @@ export function FAQ() {
               />
             </button>
             {openId === faq.id && (
-              <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-200 dark:border-gray-800">
-                <p className="text-gray-600 dark:text-gray-400">{faq.answer}</p>
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <p className="text-gray-600">{faq.answer}</p>
               </div>
             )}
           </div>
