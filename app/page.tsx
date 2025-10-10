@@ -1,9 +1,12 @@
 import { Hero } from '@/components/Hero';
 import { FilterTabs } from '@/components/FilterTabs';
 import { PluginGrid } from '@/components/PluginGrid';
-import { CodeBlock } from '@/components/CodeBlock';
 import { FAQ } from '@/components/FAQ';
 import { Header } from '@/components/Header';
+import { Features } from '@/components/Features';
+import { HowItWorks } from '@/components/HowItWorks';
+import { GettingStarted } from '@/components/GettingStarted';
+import { Stats } from '@/components/Stats';
 import { plugins } from '@/lib/data';
 
 export default function Home() {
@@ -18,7 +21,16 @@ export default function Home() {
       <main>
         <Hero />
 
-        <div className="max-w-7xl mx-auto mb-8">
+        <Stats />
+
+        <Features />
+
+        <HowItWorks />
+
+        <div className="max-w-7xl mx-auto mb-8 pt-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Browse Claude Code Plugins
+          </h2>
           <FilterTabs />
         </div>
 
@@ -28,15 +40,7 @@ export default function Home() {
           <PluginGrid title="AI & ML Tools" plugins={aiMlPlugins} />
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-900/50 py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-4">Quick Install</h2>
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-6">
-              Install any plugin with a single command
-            </p>
-            <CodeBlock code="npx @claudeai/plugin-name" />
-          </div>
-        </div>
+        <GettingStarted />
 
         <FAQ />
       </main>
