@@ -38,7 +38,7 @@ const faqs = [
     id: 6,
     question: 'What are Claude Code marketplaces?',
     answer:
-      'Claude Code marketplaces are collections of tools, templates, and integrations that extend Claude Code functionality. They can include MCP servers, custom commands, and development utilities.',
+      'Claude Code marketplaces are collections of tools, templates, and integrations that extend Claude Code functionality. They can include plugins, custom commands, and development utilities.',
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ export function FAQ() {
     <div className="max-w-4xl mx-auto px-4 py-16">
       <h2 className="text-3xl font-bold text-center mb-12">FAQ</h2>
       <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-        Frequently Asked Questions about MCP Server
+        Frequently Asked Questions about Claude Code Plugins
       </p>
       <div className="space-y-4">
         {faqs.map((faq) => (

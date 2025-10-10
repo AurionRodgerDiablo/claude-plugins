@@ -2,7 +2,7 @@ export interface Plugin {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  icon?: string; // Optional - will use default if not provided
   category: 'code-tools' | 'database' | 'utilities' | 'ai-ml' | 'templates';
   featured: boolean;
   sponsored: boolean;

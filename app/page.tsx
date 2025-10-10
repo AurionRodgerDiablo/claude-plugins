@@ -10,9 +10,10 @@ import { Prerequisites } from '@/components/Prerequisites';
 import { plugins } from '@/lib/data';
 
 export default function Home() {
-  const featuredPlugins = plugins.filter((p) => p.featured);
-  const codeToolsPlugins = plugins.filter((p) => p.category === 'code-tools');
-  const aiMlPlugins = plugins.filter((p) => p.category === 'ai-ml');
+  // Keep category logic for future use
+  // const featuredPlugins = plugins.filter((p) => p.featured);
+  // const codeToolsPlugins = plugins.filter((p) => p.category === 'code-tools');
+  // const aiMlPlugins = plugins.filter((p) => p.category === 'ai-ml');
 
   return (
     <div className="min-h-screen">
@@ -21,21 +22,19 @@ export default function Home() {
       <main>
         <Hero />
 
-        <Prerequisites />
 
         {/* Main Plugin Directory Section */}
         <div className="max-w-7xl mx-auto mb-8 pt-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Browse Claude Code Plugins
           </h2>
-          <FilterTabs />
+          {/* <FilterTabs /> */}
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <PluginGrid title="Featured MCP Servers" plugins={featuredPlugins} />
-          <PluginGrid title="Code Tools" plugins={codeToolsPlugins} />
-          <PluginGrid title="AI & ML Tools" plugins={aiMlPlugins} />
+          <PluginGrid title="All Plugins" plugins={plugins} showViewAll={false} />
         </div>
+        <Prerequisites />
 
         {/* Educational/Marketing Sections Below */}
         <Features />

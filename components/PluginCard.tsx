@@ -7,13 +7,25 @@ import { TrustBadge } from '@/components/TrustBadge';
 
 interface PluginCardProps {
   plugin: Plugin;
+  onClick?: () => void;
 }
 
-export function PluginCard({ plugin }: PluginCardProps) {
+export function PluginCard({ plugin, onClick }: PluginCardProps) {
   return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-5 hover:shadow-lg hover:border-primary-300 dark:hover:border-primary-700 transition-all cursor-pointer group">
+    <div
+      onClick={onClick}
+      className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-5 hover:shadow-lg hover:border-primary-300 dark:hover:border-primary-700 transition-all cursor-pointer group"
+    >
       <div className="flex items-start gap-4">
-        <div className="text-4xl flex-shrink-0">{plugin.icon}</div>
+        <div className="flex-shrink-0">
+          {plugin.icon ? (
+            <div className="text-4xl">{plugin.icon}</div>
+          ) : (
+            <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white shadow-md">
+              <span className="text-xl font-bold">🔌</span>
+            </div>
+          )}
+        </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2 mb-2">
             <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 group-hover:text-primary-500 transition-colors">
