@@ -1,0 +1,33 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Claude Plugin Directory - Discover Claude Code Plugins',
+  description: 'The open community marketplace for Claude Code plugins and templates. Browse, install, and build extensions for Anthropic\'s AI coding assistant.',
+  keywords: ['Claude Code plugins', 'Claude Plugin Directory', 'Claude marketplaces', 'Claude extensions', 'Anthropic Claude plugins', 'Claude developer tools', 'Claude integrations'],
+  openGraph: {
+    title: 'Claude Plugin Directory',
+    description: 'Discover and share Claude Code plugins and marketplaces',
+    type: 'website',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
