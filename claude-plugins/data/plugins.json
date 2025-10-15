@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Plugin One",
+    "description": "This is a description for Plugin One.",
+    "author": "Author One",
+    "installCommand": "plugin install plugin-one",
+    "official": true,
+    "sponsored": false,
+    "verified": true,
+    "stars": 150,
+    "downloads": 2500,
+    "tags": ["utility", "productivity"]
+  },
+  {
+    "name": "Plugin Two",
+    "description": "This is a description for Plugin Two.",
+    "author": "Author Two",
+    "installCommand": "plugin install plugin-two",
+    "official": false,
+    "sponsored": true,
+    "verified": false,
+    "stars": 75,
+    "downloads": 1200,
+    "tags": ["design", "theme"]
+  },
+  {
+    "name": "Plugin Three",
+    "description": "This is a description for Plugin Three.",
+    "author": "Author Three",
+    "installCommand": "plugin install plugin-three",
+    "official": true,
+    "sponsored": false,
+    "verified": true,
+    "stars": 200,
+    "downloads": 5000,
+    "tags": ["development", "tools"]
+  }
+]

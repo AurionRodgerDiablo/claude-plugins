@@ -42,18 +42,23 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 animate-fadeIn"
         onClick={onClose}
+        role="presentation"
       />
 
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
         <div
           className="relative bg-gray-900 rounded-2xl max-w-2xl w-full p-8 pointer-events-auto animate-flipIn shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e: React.MouseEvent) => e.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
         >
           {/* Close button */}
           <button
+            type="button"
             onClick={onClose}
             className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800"
+            aria-label="Fermer la modal"
           >
             <FiX className="text-2xl" />
           </button>
@@ -126,8 +131,10 @@ export function PluginModal({ plugin, isOpen, onClose }: PluginModalProps) {
                 <code className="text-sm font-mono">{installCommand}</code>
               </pre>
               <button
+                type="button"
                 onClick={handleCopy}
                 className="absolute top-3 right-3 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-all"
+                aria-label={copied ? "Commande copiée" : "Copier la commande"}
               >
                 {copied ? (
                   <FiCheck className="text-green-400" />
